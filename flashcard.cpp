@@ -20,7 +20,7 @@ public:
 	void showAll(); //ファイル内全単語表示
 	void addWord(string filename); //単語追加
 	void deleteWord(string filename); //単語削除
-	void deleteAll(string filename);
+	void deleteAll(string filename); //全単語削除
 };
 void Flashcard ::setWord(string newWord) {
 	word = newWord;
@@ -63,7 +63,7 @@ void Flashcard ::deleteWord(string filename) {
 	string meaning_to_delete;
 	char tango[30];
 
-	cout << "\nどの単語を削除しますか? ";
+	cout << "\nどの単語を削除しますか? 英単語を入力してください:";
 	cin >> word_to_delete;
 	ifstream read(filename);
 	ofstream write("new.txt");
